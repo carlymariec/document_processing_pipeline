@@ -1,0 +1,18 @@
+# CODEOWNERS file - Requires approval from repository owner for all changes
+# See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# All files in this repository require approval from the owner
+* @carlymariec
+
+# Critical security files - require explicit owner review
+.gitignore @carlymariec
+SECURITY.md @carlymariec
+README.md @carlymariec
+CODEOWNERS @carlymariec
+Document_Processing_Pipeline.ipynb @carlymariec
+
+# Protect against accidental data commits
+/uploads/ @carlymariec
+/downloads/ @carlymariec
+/processed_docs/ @carlymariec
+/temp/ @carlymariec
