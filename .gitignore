@@ -216,3 +216,67 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ========== DOCUMENT PROCESSING PIPELINE - SECURITY & DATA PROTECTION ==========
+# User-uploaded documents and processed files (CRITICAL: DO NOT COMMIT)
+/uploads/
+/downloads/
+/processed_docs/
+/Forensic_Processed_Docs/
+/Forensic_Processed_Docs.zip
+*_searchable.pdf
+*_normalized.pdf
+*_metadata.txt
+*.pdf
+*.tif
+*.tiff
+*.jpg
+*.jpeg
+*.png
+*.zip
+
+# Temporary processing directories
+*_extracted/
+temp/
+tmp/
+
+# User credentials and API keys (CRITICAL: DO NOT COMMIT)
+credentials.json
+credentials.yaml
+api_keys.txt
+secrets.json
+.credentials
+auth_token.txt
+colab_auth.txt
+
+# Google Colab runtime files
+runtime/
+.colab/
+
+# User data and cache
+user_data/
+cache/
+.cache/
+
+# System and OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+.AppleDouble
+.LSOverride
+
+# IDE settings with local paths
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
+
+# Temporary files
+*.swp
+*.swo
+*~
+.#*
+
+# Backup files
+*.bak
+*.backup
+*.orig
