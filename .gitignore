@@ -218,65 +218,140 @@ __marimo__/
 .streamlit/secrets.toml
 
 # ========== DOCUMENT PROCESSING PIPELINE - SECURITY & DATA PROTECTION ==========
-# User-uploaded documents and processed files (CRITICAL: DO NOT COMMIT)
+# CRITICAL: This section prevents user documents and personal data from being committed
+# See SECURITY.md for detailed data protection policies
+
+# User-uploaded documents and files (CRITICAL - DO NOT COMMIT)
 /uploads/
 /downloads/
-/processed_docs/
-/Forensic_Processed_Docs/
-/Forensic_Processed_Docs.zip
-*_searchable.pdf
-*_normalized.pdf
-*_metadata.txt
+/input/
+/docs/
 *.pdf
 *.tif
 *.tiff
 *.jpg
 *.jpeg
 *.png
+*.gif
+*.bmp
+*.eps
+*.svg
+*.webp
+*.ico
+
+# Archive files (CRITICAL - DO NOT COMMIT)
 *.zip
+*.rar
+*.7z
+*.tar
+*.gz
+*.bz2
+*.xz
 
-# Temporary processing directories
+# Processed and output documents (CRITICAL - DO NOT COMMIT)
+/processed_docs/
+/processed/
+/output/
+/results/
+/exports/
+/Forensic_Processed_Docs/
+/Forensic_Processed_Docs.zip
+*_searchable.pdf
+*_normalized.pdf
 *_extracted/
-temp/
-tmp/
+*_processed.pdf
 
-# User credentials and API keys (CRITICAL: DO NOT COMMIT)
+# Metadata extraction logs with document info (CRITICAL - DO NOT COMMIT)
+*_metadata.txt
+*_metadata.json
+*_hashes.txt
+*_log.txt
+*.metadata
+*.exif
+
+# Temporary processing directories (CRITICAL - DO NOT COMMIT)
+/temp/
+/tmp/
+/work/
+/cache/
+/.cache/
+/session_*
+
+# User credentials and secrets (CRITICAL - DO NOT COMMIT)
 credentials.json
 credentials.yaml
+credentials.yml
 api_keys.txt
+api_keys.json
 secrets.json
+secrets.yaml
+secrets.yml
 .credentials
+.secrets
 auth_token.txt
+auth_tokens.json
 colab_auth.txt
+oauth_*.json
+token_*.json
+access_key*
+secret_key*
+private_key*
 
-# Google Colab runtime files
-runtime/
-.colab/
+# Google Colab runtime and session files (CRITICAL - DO NOT COMMIT)
+/runtime/
+/.colab/
+/.colab_project/
+.colab_config
+colab_*.json
 
-# User data and cache
-user_data/
-cache/
-.cache/
+# User data and personal information (CRITICAL - DO NOT COMMIT)
+/user_data/
+/personal_data/
+/private/
+/.private/
+user_profile.json
+profile_*.json
 
-# System and OS files
+# System and operating system files
 .DS_Store
 Thumbs.db
 desktop.ini
 .AppleDouble
 .LSOverride
+ehthumbs.db
+.Spotlight-V100
+.Trashes
 
-# IDE settings with local paths
+# IDE and editor settings
 .vscode/settings.json
 .vscode/launch.json
 .vscode/extensions.json
-
-# Temporary files
+.idea/
 *.swp
 *.swo
 *~
 .#*
+.editorconfig
 
-# Backup files
+# Backup and temporary files
 *.bak
 *.backup
 *.orig
+*.tmp
+*.swp
+*#
+*.patch
+
+# macOS specific
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows specific
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux specific
+.directory
+.netrwhist
